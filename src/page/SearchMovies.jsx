@@ -36,9 +36,9 @@ const SearchMovies = () => {
   // TODO: Foreach or map every object of movies array
   return (
     <div className="d-flex flex-row flex-wrap gap-5 mt-4 justify-content-center">
-      {movies?.map((movie) => {
+      {movies?.map((movie, i) => {
         return (
-          <MovieItem id={movie.id} title={movie.title} overview={movie.overview} imageURL={import.meta.env.VITE_API_IMAGE_URL + movie?.poster_path}/>
+          <MovieItem key={i} id={movie.id} title={movie.title} overview={movie.overview} imageURL={import.meta.env.VITE_API_IMAGE_URL + movie?.poster_path}/>
         )
       })}
     </div>
